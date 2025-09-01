@@ -49,3 +49,29 @@
 </body>
 </html>
 <script src="https://cdn.tailwindcss.com"></script>
+<header class="bg-blue-600 text-white p-6 text-center">
+  <h1 class="text-3xl font-bold mb-2">سالن مطالعه آرام</h1>
+  <nav class="space-x-4">
+    <a href="#about" class="hover:underline">درباره ما</a>
+    <a href="#reserve" class="hover:underline">رزرو</a>
+    <a href="#contact" class="hover:underline">تماس با ما</a>
+  </nav>
+</header>
+<section id="reserve" class="p-6 bg-gray-100">
+  <h2 class="text-2xl font-semibold mb-4">رزرو آنلاین</h2>
+  <form id="reservationForm" class="max-w-md mx-auto bg-white p-6 rounded shadow">
+    <label class="block mb-2">نام:</label>
+    <input type="text" required class="w-full border p-2 rounded mb-4" />
+    
+    <label class="block mb-2">تاریخ:</label>
+    <input type="date" required class="w-full border p-2 rounded mb-4" />
+    
+    <label class="block mb-2">ساعت:</label>
+    <input type="time" required class="w-full border p-2 rounded mb-4" />
+    
+    <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+      ثبت رزرو
+    </button>
+  </form>
+  <div id="confirmation" class="text-green-600 mt-4 text-center"></div>
+</section>
