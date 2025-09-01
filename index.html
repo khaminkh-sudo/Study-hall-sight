@@ -1,77 +1,82 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>سالن مطالعه  سرای دانش</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>سالن مطالعه سرای دانش</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <header>
-    <h1>سالن مطالعه سرای دانش</h1>
-    <nav>
-      <a href="#about">درباره ما</a>
-      <a href="#reserve">رزرو</a>
-      <a href="#contact">تماس با ما</a>
-    </nav>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+  <!-- Header -->
+  <header class="bg-blue-700 text-white py-6 shadow">
+    <div class="container mx-auto text-center">
+      <h1 class="text-4xl font-bold mb-2">سالن مطالعه سرای دانش</h1>
+      <p class="text-lg">آرامش، تمرکز، پیشرفت</p>
+      <nav class="mt-4 space-x-4 space-x-reverse">
+        <a href="#about" class="hover:underline">درباره ما</a>
+        <a href="#reserve" class="hover:underline">رزرو</a>
+        <a href="#contact" class="hover:underline">تماس با ما</a>
+      </nav>
+    </div>
   </header>
 
-  <section id="about">
-    <h2>درباره سالن</h2>
-    <p>محیطی آرام، نور مناسب، میزهای اختصاصی و اینترنت رایگان برای مطالعه‌ی مؤثر.</p>
+  <!-- About Section -->
+  <section id="about" class="py-12 bg-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-2xl font-semibold mb-4">درباره سالن</h2>
+      <p class="max-w-xl mx-auto text-gray-600 leading-relaxed">
+        «سرای دانش» محیطی آرام و مجهز برای مطالعه‌ی مؤثر فراهم کرده است. با میزهای اختصاصی، نور مناسب، اینترنت رایگان و فضای ساکت، تجربه‌ای متفاوت از مطالعه را خواهید داشت.
+      </p>
+    </div>
   </section>
 
-  <section id="reserve">
-    <h2>رزرو آنلاین</h2>
-    <form id="reservationForm">
-      <label>نام:</label>
-      <input type="text" required />
-      <label>تاریخ:</label>
-      <input type="date" required />
-      <label>ساعت:</label>
-      <input type="time" required />
-      <button type="submit">ثبت رزرو</button>
-    </form>
-    <div id="confirmation"></div>
+  <!-- Reservation Section -->
+  <section id="reserve" class="py-12 bg-gray-100">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl font-semibold text-center mb-6">رزرو آنلاین</h2>
+      <form id="reservationForm" class="max-w-md mx-auto bg-white p-6 rounded-lg shadow">
+        <div class="mb-4">
+          <label class="block mb-1 font-medium">نام کامل</label>
+          <input type="text" required class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        </div>
+        <div class="mb-4">
+          <label class="block mb-1 font-medium">تاریخ رزرو</label>
+          <input type="date" required class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        </div>
+        <div class="mb-4">
+          <label class="block mb-1 font-medium">ساعت رزرو</label>
+          <input type="time" required class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        </div>
+        <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">ثبت رزرو</button>
+        <div id="confirmation" class="mt-4 text-green-600 text-center"></div>
+      </form>
+    </div>
   </section>
 
-  <section id="contact">
-    <h2>تماس با ما</h2>
-    <p>آدرس: تهران، خیابان مثال، پلاک ۱۲۳</p>
-    <p>تلفن: 021-12345678</p>
+  <!-- Contact Section -->
+  <section id="contact" class="py-12 bg-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-2xl font-semibold mb-4">تماس با ما</h2>
+      <p class="mb-2">📍 تهران، خیابان مثال، پلاک ۱۲۳</p>
+      <p class="mb-2">📞 تلفن: 021-12345678</p>
+      <p>📧 ایمیل: info@sarayedanesh.ir</p>
+    </div>
   </section>
 
-  <footer>
-    <p>© 2025 سالن مطالعه سرای دانش</p>
+  <!-- Footer -->
+  <footer class="bg-blue-700 text-white py-4 text-center">
+    <p>© 2025 سالن مطالعه سرای دانش | طراحی توسط امین</p>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- Script -->
+  <script>
+    document.getElementById("reservationForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      document.getElementById("confirmation").innerText = "رزرو شما با موفقیت ثبت شد!";
+    });
+  </script>
+
 </body>
 </html>
-<script src="https://cdn.tailwindcss.com"></script>
-<header class="bg-blue-600 text-white p-6 text-center">
-  <h1 class="text-3xl font-bold mb-2">سالن مطالعه آرام</h1>
-  <nav class="space-x-4">
-    <a href="#about" class="hover:underline">درباره ما</a>
-    <a href="#reserve" class="hover:underline">رزرو</a>
-    <a href="#contact" class="hover:underline">تماس با ما</a>
-  </nav>
-</header>
-<section id="reserve" class="p-6 bg-gray-100">
-  <h2 class="text-2xl font-semibold mb-4">رزرو آنلاین</h2>
-  <form id="reservationForm" class="max-w-md mx-auto bg-white p-6 rounded shadow">
-    <label class="block mb-2">نام:</label>
-    <input type="text" required class="w-full border p-2 rounded mb-4" />
-    
-    <label class="block mb-2">تاریخ:</label>
-    <input type="date" required class="w-full border p-2 rounded mb-4" />
-    
-    <label class="block mb-2">ساعت:</label>
-    <input type="time" required class="w-full border p-2 rounded mb-4" />
-    
-    <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
-      ثبت رزرو
-    </button>
-  </form>
-  <div id="confirmation" class="text-green-600 mt-4 text-center"></div>
-</section>
+
