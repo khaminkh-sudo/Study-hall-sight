@@ -5,63 +5,89 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>سالن مطالعه سرای دانش</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/gh/rastikerdar/gandom-font@v1.0.0/dist/font-face.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Gandom', sans-serif;
+      background-image: url('logo.png');
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: 200px;
+      background-blend-mode: lighten;
+      background-attachment: fixed;
+      background-opacity: 0.05;
+    }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+<body class="bg-gray-50 text-gray-800">
 
   <!-- Header -->
-  <header class="bg-blue-700 text-white py-6 shadow">
-    <div class="container mx-auto text-center">
-      <h1 class="text-4xl font-bold mb-2">سالن مطالعه سرای دانش</h1>
-      <p class="text-lg">آرامش، تمرکز، پیشرفت</p>
-      <nav class="mt-4 space-x-4 space-x-reverse">
-        <a href="#about" class="hover:underline">درباره ما</a>
-        <a href="#reserve" class="hover:underline">رزرو</a>
-        <a href="#contact" class="hover:underline">تماس با ما</a>
-      </nav>
-    </div>
+  <header class="bg-blue-700 text-white py-6 shadow text-center">
+    <h1 class="text-4xl font-bold mb-2">سالن مطالعه سرای دانش</h1>
+    <p class="text-lg">آرامش، تمرکز، پیشرفت</p>
+    <nav class="mt-4 flex justify-center gap-4 flex-wrap">
+      <a href="#about" class="hover:underline">درباره ما</a>
+      <a href="#learning" class="hover:underline">یادگیری</a>
+      <a href="#motivation" class="hover:underline">انگیزه</a>
+      <a href="#reserve" class="hover:underline">رزرو</a>
+      <a href="#contact" class="hover:underline">تماس با ما</a>
+    </nav>
   </header>
 
-  <!-- About Section -->
-  <section id="about" class="py-12 bg-white">
-    <div class="container mx-auto px-4 text-center">
-      <h2 class="text-2xl font-semibold mb-4">درباره سالن</h2>
-      <p class="max-w-xl mx-auto text-gray-600 leading-relaxed">
-        «سرای دانش» محیطی آرام و مجهز برای مطالعه‌ی مؤثر فراهم کرده است. با میزهای اختصاصی، نور مناسب، اینترنت رایگان و فضای ساکت، تجربه‌ای متفاوت از مطالعه را خواهید داشت.
-      </p>
+  <!-- About -->
+  <section id="about" class="py-12 bg-white text-center px-4">
+    <h2 class="text-2xl font-semibold mb-4">درباره سالن</h2>
+    <p class="max-w-xl mx-auto text-gray-600 leading-relaxed">
+      «سرای دانش» محیطی آرام و مجهز برای مطالعه‌ی مؤثر فراهم کرده است. با میزهای اختصاصی، نور مناسب، اینترنت رایگان و فضای ساکت، تجربه‌ای متفاوت از یادگیری را خواهید داشت.
+    </p>
+  </section>
+
+  <!-- Learning Techniques -->
+  <section id="learning" class="py-12 bg-gray-100 px-4">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-2xl font-semibold text-center mb-6">روش‌های یادگیری و تمرکز</h2>
+      <ul class="list-disc pr-6 text-gray-700 leading-loose">
+        <li>تکنیک فاینمن: توضیح دادن مطلب به زبان ساده</li>
+        <li>نقشه ذهنی: ترسیم ارتباط بین مفاهیم</li>
+        <li>پومودورو: مطالعه در بازه‌های ۲۵ دقیقه‌ای</li>
+        <li>مدیتیشن و تنفس عمیق برای افزایش تمرکز</li>
+        <li>مرور منظم با فلش‌کارت و اپلیکیشن‌های حافظه</li>
+      </ul>
     </div>
   </section>
 
-  <!-- Reservation Section -->
-  <section id="reserve" class="py-12 bg-gray-100">
-    <div class="container mx-auto px-4">
-      <h2 class="text-2xl font-semibold text-center mb-6">رزرو آنلاین</h2>
-      <form id="reservationForm" class="max-w-md mx-auto bg-white p-6 rounded-lg shadow">
-        <div class="mb-4">
-          <label class="block mb-1 font-medium">نام کامل</label>
-          <input type="text" required class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" />
-        </div>
-        <div class="mb-4">
-          <label class="block mb-1 font-medium">تاریخ رزرو</label>
-          <input type="date" required class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" />
-        </div>
-        <div class="mb-4">
-          <label class="block mb-1 font-medium">ساعت رزرو</label>
-          <input type="time" required class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" />
-        </div>
-        <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">ثبت رزرو</button>
-        <div id="confirmation" class="mt-4 text-green-600 text-center"></div>
-      </form>
-    </div>
+  <!-- Motivation -->
+  <section id="motivation" class="py-12 bg-white px-4 text-center">
+    <h2 class="text-2xl font-semibold mb-6">انگیزه برای یادگیری</h2>
+    <blockquote class="text-lg text-blue-700 font-medium max-w-2xl mx-auto leading-relaxed">
+      «هر روز دو انتخاب جلو روی شماست: بخوابی و خواب رویاهات رو ببینی، یا بیدار بشی و اون‌ها رو به دست بیاری.»
+    </blockquote>
+    <p class="mt-6 text-gray-600 max-w-xl mx-auto">
+      مطالعه در محیطی آرام، با نور مناسب و سکوت نسبی، از نظر روان‌شناسی باعث افزایش تمرکز، کاهش اضطراب و تقویت حافظه می‌شود.
+    </p>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-12 bg-white">
-    <div class="container mx-auto px-4 text-center">
-      <h2 class="text-2xl font-semibold mb-4">تماس با ما</h2>
-      <p class="mb-2">📍 تهران، خیابان مثال، پلاک ۱۲۳</p>
-      <p class="mb-2">📞 تلفن: 021-12345678</p>
-      <p>📧 ایمیل: info@sarayedanesh.ir</p>
-    </div>
+  <!-- Reservation -->
+  <section id="reserve" class="py-12 bg-gray-100 px-4">
+    <h2 class="text-2xl font-semibold text-center mb-6">رزرو آنلاین</h2>
+    <form id="reservationForm" class="max-w-md mx-auto bg-white p-6 rounded-lg shadow">
+      <label class="block mb-2 font-medium">نام کامل</label>
+      <input type="text" required class="w-full border p-2 rounded mb-4" />
+      <label class="block mb-2 font-medium">تاریخ رزرو</label>
+      <input type="date" required class="w-full border p-2 rounded mb-4" />
+      <label class="block mb-2 font-medium">ساعت رزرو</label>
+      <input type="time" required class="w-full border p-2 rounded mb-4" />
+      <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">ثبت رزرو</button>
+      <div id="confirmation" class="mt-4 text-green-600 text-center"></div>
+    </form>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-12 bg-white text-center px-4">
+    <h2 class="text-2xl font-semibold mb-4">تماس با ما</h2>
+    <p>📍 تهران، خیابان مثال، پلاک ۱۲۳</p>
+    <p>📞 تلفن: 021-12345678</p>
+    <p>📧 ایمیل: info@sarayedanesh.ir</p>
   </section>
 
   <!-- Footer -->
@@ -79,24 +105,3 @@
 
 </body>
 </html>
-<link href="https://cdn.jsdelivr.net/gh/rastikerdar/gandom-font@v1.0.0/dist/font-face.css" rel="stylesheet" type="text/css" />
-<h1 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">سالن مطالعه سرای دانش</h1>
-<nav class="flex flex-col sm:flex-row gap-2 sm:gap-4 justify-center mt-4">
-  <a href="#about" class="hover:underline">درباره ما</a>
-  <a href="#reserve" class="hover:underline">رزرو</a>
-  <a href="#contact" class="hover:underline">تماس با ما</a>
-</nav>
-<form class="w-full max-w-sm mx-auto bg-white p-4 sm:p-6 rounded shadow">
-<header class="bg-blue-700 text-white py-6 shadow">
-  <div class="container mx-auto text-center">
-    <img src="logo.png" alt="لوگوی سرای دانش" class="mx-auto w-24 h-24 mb-4" />
-    <h1 class="text-4xl font-bold mb-2">سالن مطالعه سرای دانش</h1>
-    <p class="text-lg">آرامش، تمرکز، پیشرفت</p>
-    <nav class="mt-4 space-x-4 space-x-reverse">
-      <a href="#about" class="hover:underline">درباره ما</a>
-      <a href="#reserve" class="hover:underline">رزرو</a>
-      <a href="#contact" class="hover:underline">تماس با ما</a>
-    </nav>
-  </div>
-</header>
-
